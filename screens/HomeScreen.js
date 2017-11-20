@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    //marginHorizontal: 50,
+    marginHorizontal: 50,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: 'right',
+    textAlign: 'center',
   },
   tabBarInfoContainer: {
     position: 'absolute',

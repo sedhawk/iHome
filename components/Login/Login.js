@@ -35,7 +35,7 @@ const formstyles = StyleSheet.create({
 LoginForm=({navigation}) => (
         <View style={formstyles.container}>
             <StatusBar 
-                barStyle="light-content"
+                barStyle="dark-content"
             />
             <TextInput
                 placeholder="username or email"
@@ -71,7 +71,7 @@ export default class LoginScreen extends Component {
                 <View style={styles.logoContainer}>
                     <Image 
                         style={styles.logo}
-                        source={require('../../assets/images/house.png')}
+                        source={require('../../assets/images/vacuum.png')}
                     />
                     <Text style={styles.title}>
                         A network device app built using React Native
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     logo: {
         width: 100,
         height: 100,
+        borderRadius: 50
     },
     title: {
         color: '#FFF', 

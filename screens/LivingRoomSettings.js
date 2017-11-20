@@ -11,64 +11,68 @@ import { StyleSheet,
         TouchableHighlight} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export default class LivingRoomSettingsScreen extends Component {
+const formstyles = StyleSheet.create({
+    container: {
+        padding: 20,
+    },
+    input: {
+        height: 40,
+        backgroundColor: 'rgba(255,255,255,0.3)',
+        marginBottom: 15,
+        color: 'black',
+        paddingHorizontal: 10
+    },
+    buttonContainer: {
+        backgroundColor: '#2980b9',
+        paddingVertical: 15
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: 'black',
+        fontWeight: '500'
+    }
+})
+
+export default class OutsideSettingsScreen extends Component {
     render (){
         return (
         
             <View style={styles.container}>
                 <View style={styles.rowContainer}>
-                    <Image style={styles.cellContainer}
-                        source={require("../assets/images/trees.png")} />
-                    <Button
-                            onPress={() => this.props.navigation.navigate('Rooms')}
-                            title="     Outside        " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
-                        <Image style={styles.buttonContainer}
-                            source={require("../assets/images/gear.png")} />
-                    </TouchableHighlight>
-                </View>
-                <View style={styles.rowContainer}>
-                    <Image style={styles.cellContainer}
-                        source={require("../assets/images/house.png")} />
-                    <Button
-                            onPress={() => this.props.navigation.navigate('Rooms')}
-                            title="  Living Room    " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
-                        <Image style={styles.buttonContainer}
-                            source={require("../assets/images/gear.png")} />
-                    </TouchableHighlight>
-                </View>
-                <View style={styles.rowContainer}>
-                    <Image style={styles.cellContainer}
-                        source={require("../assets/images/garage.png")} />
-                    <Button
-                            onPress={() => this.props.navigation.navigate('Rooms')}
-                            title="    Garage          " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
-                        <Image style={styles.buttonContainer}
-                            source={require("../assets/images/gear.png")} />
-                    </TouchableHighlight>
-                </View>
-                <View style={styles.rowContainer}>
-                    <Image style={styles.cellContainer}
-                        source={require("../assets/images/house.png")} />
-                    <Button
-                            onPress={() => this.props.navigation.navigate('Rooms')}
-                            title="    Kitchen          " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
-                        <Image style={styles.buttonContainer}
-                            source={require("../assets/images/gear.png")} />
-                    </TouchableHighlight>
-                </View>
-                <View style={styles.rowContainer}>
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
-                        <Image style={styles.buttonContainer}
-                            source={require("../assets/images/plus_sign.png")} />
-                    </TouchableHighlight>
+
                     <Text style={styles.textContainer}>
-                        Add Room
+                        Room Name:
                     </Text>
-                </View> 
+                    <TextInput
+                        placeholder="Current Name"
+                        placeholderTextColor= "grey"
+                        returnKeyType="go"
+                        style={formstyles.input}
+                    />
+                </View>
+                <View style={styles.rowContainer}>
+
+                    <Image  style={styles.cellContainer}
+                            source={require("../assets/images/house.png")} />
+                    <Button style={styles.buttonText}
+                            onPress={() => this.props.navigation.navigate('Rooms')}
+                            title="  New Image" />
+                </View>
+                <View style={styles.rowContainer}>
+                    <Button style={styles.buttonText}
+                            onPress={() => this.props.navigation.goBack()}
+                            title=" Save " />
+                    <Button style={styles.buttonText}
+                            onPress={() => this.props.navigation.goBack()}
+                            title="  Cancel " />
+                    
+                </View>
+                <View style={styles.rowContainer}>
+                    <Button style={styles.buttonText}
+                            onPress={() => this.props.navigation.goBack()}
+                            title=" Delete " />
+                    
+                </View>
             </View>
         );
 
@@ -115,6 +119,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         paddingVertical: 8,
-        paddingLeft: 6
+        paddingLeft: 6,
+        fontSize: 18
     }
 });
