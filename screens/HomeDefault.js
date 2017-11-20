@@ -20,9 +20,9 @@ export default class HomeDefaultScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/trees.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('OutsideSettings')}
+                            onPress={() => this.props.navigation.navigate('OutsideDevices')}
                             title="     Outside        " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
+                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('OutsideSettings')} >
                         <Image style={styles.buttonContainer}
                             source={require("../assets/images/gear.png")} />
                     </TouchableHighlight>
@@ -31,9 +31,9 @@ export default class HomeDefaultScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/house.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('LivingRoomSettings')}
+                            onPress={() => this.props.navigation.navigate('LivingRoomDevices')}
                             title="  Living Room    " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
+                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('LivingRoomSettings')} >
                         <Image style={styles.buttonContainer}
                             source={require("../assets/images/gear.png")} />
                     </TouchableHighlight>
@@ -42,9 +42,9 @@ export default class HomeDefaultScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/garage.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('GarageSettings')}
+                            onPress={() => this.props.navigation.navigate('GarageDevice')}
                             title="    Garage          " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
+                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('GarageSettings')} >
                         <Image style={styles.buttonContainer}
                             source={require("../assets/images/gear.png")} />
                     </TouchableHighlight>
@@ -53,9 +53,9 @@ export default class HomeDefaultScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/house.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('KitchenSettings')}
+                            onPress={() => this.props.navigation.navigate('RoomSettings')}
                             title="    Kitchen          " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('RoomSettings')} >
+                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('KitchenSettings')} >
                         <Image style={styles.buttonContainer}
                             source={require("../assets/images/gear.png")} />
                     </TouchableHighlight>

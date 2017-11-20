@@ -29,7 +29,7 @@ const formstyles = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         color: 'black',
-        fontWeight: '500'
+        fontWeight: '500',
     }
 })
 

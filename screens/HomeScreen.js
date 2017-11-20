@@ -19,9 +19,13 @@ import DevicesScreen from '../screens/Devices';
 import RoomSettingsScreen from '../screens/RoomSettings';
 import DeviceSettingsScreen from '../screens/DeviceSettings';
 import OutsideSettingsScreen from '../screens/OutsideSettings';
+import OutsideDevicesScreen from '../screens/OutsideDevices';
 import LivingRoomSettingsScreen from '../screens/LivingRoomSettings';
+import LivingRoomDevicesScreen from '../screens/LivingRoomDevices';
 import GarageSettingsScreen from '../screens/GarageSettings';
+import GarageDeviceScreen from '../screens/GarageDevice';
 import KitchenSettingsScreen from '../screens/KitchenSettings';
+import KitchenDevicesScreen from '../screens/KitchenDevices';
 
 
 export class HomeScreen extends React.Component {
@@ -261,10 +265,22 @@ const RootNavigator = StackNavigator({
       headerTitle: 'Outside Settings',
     },
   },
+  OutsideDevices: {
+    screen: OutsideDevicesScreen,
+    navigationOptions: {
+      headerTitle: 'Outside Devices',
+    },
+  },
   LivingRoomSettings: {
     screen: LivingRoomSettingsScreen,
     navigationOptions: {
       headerTitle: 'Living Room Settings',
+    },
+  },
+  LivingRoomDevices: {
+    screen: LivingRoomDevicesScreen,
+    navigationOptions: {
+      headerTitle: 'Living Room Devices',
     },
   },
   GarageSettings: {
@@ -273,10 +289,22 @@ const RootNavigator = StackNavigator({
       headerTitle: 'Garage Settings',
     },
   },
+  GarageDevice: {
+    screen: GarageDeviceScreen,
+    navigationOptions: {
+      headerTitle: 'Garage Device',
+    },
+  },
   KitchenSettings: {
     screen: KitchenSettingsScreen,
     navigationOptions: {
       headerTitle: 'Kitchen Settings',
+    },
+  },
+  KitchenDevices: {
+    screen: KitchenDevicesScreen,
+    navigationOptions: {
+      headerTitle: 'Kitchen Devices',
     },
   },      
 });
