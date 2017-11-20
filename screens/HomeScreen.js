@@ -11,7 +11,7 @@ import { StackNavigator } from 'react-navigation';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import { Ionicons } from '@expo/vector-icons';
-import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
+//import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 import LoginScreen from '../components/Login/Login';
 import HomeDefaultScreen from '../screens/HomeDefault';
 import RoomsScreen from '../screens/Rooms';
@@ -26,7 +26,7 @@ import GarageSettingsScreen from '../screens/GarageSettings';
 import GarageDeviceScreen from '../screens/GarageDevice';
 import KitchenSettingsScreen from '../screens/KitchenSettings';
 import KitchenDevicesScreen from '../screens/KitchenDevices';
-
+import VacuumConfigScreen from '../screens/VacuumConfig';
 
 export class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -305,6 +305,12 @@ const RootNavigator = StackNavigator({
     screen: KitchenDevicesScreen,
     navigationOptions: {
       headerTitle: 'Kitchen Devices',
+    },
+  },
+  VacuumConfig: {
+    screen: VacuumConfigScreen,
+    navigationOptions: {
+      headerTitle: 'Vacuum Configuration',
     },
   },      
 });

@@ -53,7 +53,7 @@ export default class HomeDefaultScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/house.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('RoomSettings')}
+                            onPress={() => this.props.navigation.navigate('KitchenDevices')}
                             title="    Kitchen          " />
                     <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('KitchenSettings')} >
                         <Image style={styles.buttonContainer}
