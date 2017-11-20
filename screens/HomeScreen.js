@@ -19,44 +19,8 @@ import DevicesScreen from '../screens/Devices';
 import RoomSettingsScreen from '../screens/RoomSettings';
 import DeviceSettingsScreen from '../screens/DeviceSettings';
 
-/*
-const App = StackNavigator({
-  Home: {screen: HomeScreen},
-  Login: {screen: Login},
-
-})*/
-
-/*class HomeScreen extends React.Component {
-  static navigationOptions ={
-    title: 'Welcome',
-  };
-  render() {
-    const {navigate} = this.props.navigation;
-    return (
-      <Button
-        title ="Login Here"
-        onPress={() =>
-          navigate('Login', {name: 'Joe'})
-        }
-      />
-    )
-  }
-}*/
 
 export class HomeScreen extends React.Component {
-  /*render(){
-    return (
-        <View style={[styles.containerOne]}>
-        //Some Input fields
-        <Button
-          onPress={() => navigation.navigate('Home')}
-          titlen="Login"
-          style={[styles.loginButton]}
-        />
-      <Login />
-      </View>
-    )
-  }*/
   static navigationOptions = {
     header: null,
   };
@@ -107,7 +71,7 @@ export class HomeScreen extends React.Component {
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>Devices are separated into rooms. User can create and edit each device and room.</Text>
+          <Text style={styles.tabBarInfoText}> Each network enabled device is separated into rooms for easy assortment.</Text>
 
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
@@ -127,7 +91,7 @@ export class HomeScreen extends React.Component {
 
       return (
         <Text style={styles.developmentModeText}>
-          iHome {"\n"} {learnMoreButton}
+          IHome {"\n"} {learnMoreButton}
         </Text>
       );
     } else {
@@ -250,19 +214,6 @@ const styles = StyleSheet.create({
   }
 });
 
-
-
-/*const HomeScreen = ({ navigation }) => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>Home Screen</Text>
-    <Button
-      onPress={() => navigation.navigate('Login')}
-      title="Go to Login Page"
-    />
-  </View>
-);*/
-
-
 const RootNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -279,7 +230,7 @@ const RootNavigator = StackNavigator({
   HomeDefault: {
     screen: HomeDefaultScreen,
     navigationOptions: {
-      headerTitle: 'IHome',
+      headerTitle: 'Home',
     },
   },
   Rooms: {
