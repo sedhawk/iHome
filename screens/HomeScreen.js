@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../components/Login/Login.js';
 import {
   AppRegistry,
   Image,
@@ -8,6 +9,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
+  StackNavigator,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -17,7 +20,42 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 
+const App = StackNavigator({
+  Home: {screen: HomeScreen},
+  Login: {screen: Login},
+})
+
+/*class HomeScreen extends React.Component {
+  static navigationOptions ={
+    title: 'Welcome',
+  };
+  render() {
+    const {navigate} = this.props.navigation;
+    return (
+      <Button
+        title ="Login Here"
+        onPress={() =>
+          navigate('Login', {name: 'Joe'})
+        }
+      />
+    )
+  }
+}*/
+
 export default class HomeScreen extends React.Component {
+  /*render(){
+    return (
+        <View style={[sytles.containerOne]}>/>
+        //Some Input fields
+        <Button
+          onPress={() => navigation.navigate('Home')}
+          titlen="Login"
+          style={[styles.loginButton]}
+        />
+        </View>
+      <Login />
+    )
+  }*/
   static navigationOptions = {
     header: null,
   };
@@ -42,17 +80,18 @@ export default class HomeScreen extends React.Component {
 
             {/*<Text style={styles.getStartedText}>Get started by opening</Text>*/}
             
-            
-
-            
-
             <View style={styles.homeScreenFilename}>
               <Image
                 style={styles.rowContainer} 
                 source={require("../assets/images/trees.png")} 
               />
-              <MonoText style={styles.getStartedText}>Outside</MonoText>
+              <MonoText style={styles.getStartedText}>
+                Outside
+              </MonoText>
+                  
             </View>
+            
+            
 
             <Text style={styles.getStartedText}>
               Welcome to the beginnings of iHome, your favorite app ever.
@@ -196,6 +235,11 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  subtitle: {
+    fontSize: 16,
+    fontWeight: '500',
+    marginBottom: 12,
   },
   rowContainer: {
     width: 80,
