@@ -1,5 +1,6 @@
 import React from 'react';
-import Login from '../components/Login/Login.js';
+import Login from '../components/Login/Login';
+import LoginForm from '../components/Login/LoginForm';
 import {
   AppRegistry,
   Image,
@@ -23,9 +24,10 @@ import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 const App = StackNavigator({
   Home: {screen: HomeScreen},
   Login: {screen: Login},
+
 })
 
-/*class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
   static navigationOptions ={
     title: 'Welcome',
   };
@@ -40,10 +42,10 @@ const App = StackNavigator({
       />
     )
   }
-}*/
+}
 
 export default class HomeScreen extends React.Component {
-  /*render(){
+  render(){
     return (
         <View style={[sytles.containerOne]}>/>
         //Some Input fields
@@ -55,7 +57,7 @@ export default class HomeScreen extends React.Component {
         </View>
       <Login />
     )
-  }*/
+  }
   static navigationOptions = {
     header: null,
   };
