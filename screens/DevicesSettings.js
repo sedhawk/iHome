@@ -10,10 +10,14 @@ import { StyleSheet,
         TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export default class DeviceSettings extends Component {
+export default class DeviceSettingsScreen extends Component {
     render (){
         return (
-            
+            <View>
+            <Text>
+                You need to code super fast
+            </Text>
+        </View>
         );
 
     }

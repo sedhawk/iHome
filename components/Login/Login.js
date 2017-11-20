@@ -73,8 +73,8 @@ export default class LoginScreen extends Component {
                         style={styles.logo}
                         source={require('../../assets/images/house.png')}
                     />
-                    <Text style={styles.Title}>
-                        A network device app made using React Native
+                    <Text style={styles.title}>
+                        A network device app built using React Native
                     </Text>
 
                 </View>

@@ -16,7 +16,7 @@ export default class HomeDefaultScreen extends Component {
          
             <View>
                 <Text>
-                    LOGIN
+                    Fix This
                 </Text>
             </View>
 

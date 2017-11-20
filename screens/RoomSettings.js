@@ -10,10 +10,14 @@ import { StyleSheet,
         TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export default class RoomSettings extends Component {
+export default class RoomSettingsScreen extends Component {
     render (){
         return (
-            
+            <View>
+            <Text>
+                Nope, not done
+            </Text>
+        </View>
         );
 
     }

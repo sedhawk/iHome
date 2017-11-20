@@ -14,6 +14,10 @@ import { Ionicons } from '@expo/vector-icons';
 import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 import LoginScreen from '../components/Login/Login';
 import HomeDefaultScreen from '../screens/HomeDefault';
+import RoomsScreen from '../screens/Rooms';
+import DevicesScreen from '../screens/Devices';
+import RoomSettingsScreen from '../screens/RoomSettings';
+import DeviceSettingsScreen from '../screens/DeviceSettings';
 
 /*
 const App = StackNavigator({
@@ -275,9 +279,33 @@ const RootNavigator = StackNavigator({
   HomeDefault: {
     screen: HomeDefaultScreen,
     navigationOptions: {
-      headerTitle: 'iHome',
+      headerTitle: 'IHome',
     },
-  }, 
+  },
+  Rooms: {
+    screen: RoomsScreen,
+    navigationOptions: {
+      headerTitle: 'Room',
+    },
+  },
+  Devices: {
+    screen: DevicesScreen,
+    navigationOptions: {
+      headerTitle: 'Devices',
+    },
+  },
+  RoomSettings: {
+    screen: RoomSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Room Settings',
+    },
+  },
+  DeviceSettings: {
+    screen: DeviceSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Device Settings',
+    },
+  },  
 });
 
 export default RootNavigator;
