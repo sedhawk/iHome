@@ -10,7 +10,7 @@ import { StyleSheet,
         TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export class Rooms extends Component {
+export default class Rooms extends Component {
     render (){
         return (
             

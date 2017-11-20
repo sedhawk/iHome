@@ -10,7 +10,7 @@ import { StyleSheet,
         TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export class Devices extends Component {
+export default class Devices extends Component {
     render (){
         return (
             

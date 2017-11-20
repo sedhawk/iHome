@@ -55,7 +55,7 @@ LoginForm=({navigation}) => (
                 style={formstyles.input}
                 ref={(input)=> this.passwordInput = input}
             />
-            <TouchableOpacity style={formstyles.buttonContainer} onPress={()=>navigation.goBack()} >
+            <TouchableOpacity style={formstyles.buttonContainer} onPress={()=>navigation.navigate('HomeDefault')} >
                 <Text style={formstyles.buttonText}>
                     LOGIN
                 </Text>
@@ -83,10 +83,7 @@ export default class LoginScreen extends Component {
                     <LoginForm navigation={this.props.navigation}/>
                 </View>
 
-                <Button 
-                    onPress={() => this.props.navigation.goBack()}
-                       title="Go back home"
-                />
+                
 
             </KeyboardAvoidingView>
         );

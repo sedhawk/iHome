@@ -10,10 +10,16 @@ import { StyleSheet,
         TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-export class HomeDefault extends Component {
+export default class HomeDefaultScreen extends Component {
     render (){
         return (
-            
+         
+            <View>
+                <Text>
+                    LOGIN
+                </Text>
+            </View>
+
         );
 
     }
