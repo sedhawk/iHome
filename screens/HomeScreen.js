@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Login from '../components/Login/Login';
 import LoginForm from '../components/Login/LoginForm';
 import {
@@ -13,6 +13,9 @@ import {
   Button,
   StackNavigator,
 } from 'react-native';
+
+import { StackNavigator } from 'react-navigation';
+
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
@@ -25,9 +28,9 @@ const App = StackNavigator({
   Home: {screen: HomeScreen},
   Login: {screen: Login},
 
-})
+})*/
 
-class HomeScreen extends React.Component {
+/*class HomeScreen extends React.Component {
   static navigationOptions ={
     title: 'Welcome',
   };
@@ -42,20 +45,20 @@ class HomeScreen extends React.Component {
       />
     )
   }
-}
+}*/
 
-export default class HomeScreen extends React.Component {
+/*export default class HomeScreen extends React.Component {
   render(){
     return (
-        <View style={[sytles.containerOne]}>/>
+        <View style={[sytles.containerOne]}>
         //Some Input fields
         <Button
           onPress={() => navigation.navigate('Home')}
           titlen="Login"
           style={[styles.loginButton]}
         />
-        </View>
       <Login />
+      </View>
     )
   }
   static navigationOptions = {
@@ -78,11 +81,11 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
+            {this._maybeRenderDevelopmentModeWarning()}*/
 
             {/*<Text style={styles.getStartedText}>Get started by opening</Text>*/}
             
-            <View style={styles.homeScreenFilename}>
+ /*           <View style={styles.homeScreenFilename}>
               <Image
                 style={styles.rowContainer} 
                 source={require("../assets/images/trees.png")} 
@@ -249,4 +252,37 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginRight: 10
   }
+});*/
+
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+import { StackNavigator } from 'react-navigation'; // 1.0.0-beta.14
+import LoginScreen from '../components/Login/Login';
+
+const HomeScreen = ({ navigation }) => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+    <Button
+      onPress={() => navigation.navigate('Login')}
+      title="Go to Login Page"
+    />
+  </View>
+);
+
+
+const RootNavigator = StackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      headerTitle: 'Home',
+    },
+  },
+  Login: {
+    screen: LoginScreen,
+    navigationOptions: {
+      headerTitle: 'Login',
+    },
+  },
 });
+
+export default RootNavigator;
