@@ -18,6 +18,10 @@ import RoomsScreen from '../screens/Rooms';
 import DevicesScreen from '../screens/Devices';
 import RoomSettingsScreen from '../screens/RoomSettings';
 import DeviceSettingsScreen from '../screens/DeviceSettings';
+import OutsideSettingsScreen from '../screens/OutsideSettings';
+import LivingRoomSettingsScreen from '../screens/LivingRoomSettings';
+import GarageSettingsScreen from '../screens/GarageSettings';
+import KitchenSettingsScreen from '../screens/KitchenSettings';
 
 
 export class HomeScreen extends React.Component {
@@ -59,23 +63,17 @@ export class HomeScreen extends React.Component {
             
 
             <Text style={styles.getStartedText}>
-              Welcome to the beginnings of iHome, your favorite app ever.
+              Welcome to the about page. {"\n"} 
+              Each device is sorted into rooms. {"\n"} 
+              Users can add as many rooms with {"\n"} 
+              many devices inside each room.
             </Text>
           </View>
 
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
-          </View>
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}> Each network enabled device is separated into rooms for easy assortment.</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-          </View>
         </View>
       </View>
     );
@@ -143,7 +141,7 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    //marginHorizontal: 50,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -230,7 +228,7 @@ const RootNavigator = StackNavigator({
   HomeDefault: {
     screen: HomeDefaultScreen,
     navigationOptions: {
-      headerTitle: 'Home',
+      headerTitle: 'IHome',
     },
   },
   Rooms: {
@@ -256,7 +254,31 @@ const RootNavigator = StackNavigator({
     navigationOptions: {
       headerTitle: 'Device Settings',
     },
-  },  
+  },
+  OutsideSettings: {
+    screen: OutsideSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Outside Settings',
+    },
+  },
+  LivingRoomSettings: {
+    screen: LivingRoomSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Living Room Settings',
+    },
+  },
+  GarageSettings: {
+    screen: GarageSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Garage Settings',
+    },
+  },
+  KitchenSettings: {
+    screen: KitchenSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Kitchen Settings',
+    },
+  },      
 });
 
 export default RootNavigator;
