@@ -18,3 +18,16 @@ export default class Rooms extends Component {
 
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+    rowContainer: {
+        width: 80,
+        height: 60,
+        resizeMode: 'contain',
+        marginRight: 10
+    }
+});
