@@ -10,6 +10,7 @@ import { StyleSheet,
         TouchableOpacity,
         TouchableHighlight } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+//import { RadioButtons } from 'react-native-radio-buttons';
 //import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 //import { CheckBox } from 'react-native-elements';
 //import { CheckBox } from 'react-native-checkbox';
@@ -44,7 +45,7 @@ export default class VacuumConfigScreen extends Component {
                 <View style={styles.rowContainer}>
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/vacuum.png")} />
-                    <Text>
+                    <Text style={styles.textTitle}>
                             Vacuum
                     </Text>
                 </View>
@@ -75,7 +76,7 @@ export default class VacuumConfigScreen extends Component {
 
                 <View style={styles.rowContainer}>
                         <Button style={styles.buttonText}
-                            onPress={() => this.props.navigation.navigate('Devices')}
+                            onPress={() => this.props.navigation.goBack()}
                             title="Manaul Start" />
                 </View>
 
@@ -97,10 +98,13 @@ const styles = StyleSheet.create({
         //flex: 1,
         flexDirection: 'row',
         //height: 20,
-        resizeMode: 'contain',
+        //resizeMode: 'contain',
         paddingVertical: 5,
         //alignItems: 'center',
         justifyContent: 'center',
+    },
+    imageStyle: {
+        resizeMode: 'contain',
     },
     buttonContainer: {
         width: 40,
@@ -120,11 +124,17 @@ const styles = StyleSheet.create({
     cellContainer: {
         width: 80,
         height: 80,
-        resizeMode: 'contain',
+        //resizeMode: 'contain',
         backgroundColor: '#fff',
     },
+    textTitle: {
+        paddingVertical: 25,
+        paddingLeft: 10,
+        fontSize: 24,
+    },
     textContainer: {
-        paddingVertical: 8,
+        fontSize: 14,
+        paddingVertical: 12,
         paddingLeft: 6
     },
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import {  Image, 
+import {  Dimensions,
+          Image, 
           Platform, 
           ScrollView, 
           StyleSheet,
@@ -11,7 +12,7 @@ import { StackNavigator } from 'react-navigation';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import { Ionicons } from '@expo/vector-icons';
-//import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
+import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 import LoginScreen from '../components/Login/Login';
 import HomeDefaultScreen from '../screens/HomeDefault';
 import RoomsScreen from '../screens/Rooms';
@@ -33,9 +34,10 @@ export class HomeScreen extends React.Component {
     header: null,
   };
 
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} >
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
             <Image

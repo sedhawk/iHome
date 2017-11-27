@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, 
+import { 
+        StyleSheet, 
         View, 
         Image, 
         Text, 
@@ -87,10 +88,13 @@ const styles = StyleSheet.create({
         //flex: 1,
         flexDirection: 'row',
         //height: 20,
-        resizeMode: 'contain',
+        //resizeMode: 'contain',
         paddingVertical: 5,
         //alignItems: 'center',
         justifyContent: 'center',
+    },
+    imageStyle: {
+        resizeMode: 'contain',
     },
     buttonContainer: {
         width: 25,
@@ -110,7 +114,7 @@ const styles = StyleSheet.create({
     cellContainer: {
         width: 50,
         height: 50,
-        resizeMode: 'contain',
+        //resizeMode: 'contain',
         backgroundColor: '#fff',
     },
     textContainer: {
