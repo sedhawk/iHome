@@ -7,9 +7,14 @@ import { StyleSheet,
         Button, 
         TextInput, 
         StatusBar, 
-        TouchableOpacity, 
-        TouchableHighlight} from 'react-native';
+        TouchableOpacity,
+        TouchableHighlight } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+//import { RadioButtons } from 'react-native-radio-buttons';
+//import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
+//import { CheckBox } from 'react-native-elements';
+//import { CheckBox } from 'react-native-checkbox';
+
 
 const formstyles = StyleSheet.create({
     container: {
@@ -33,47 +38,49 @@ const formstyles = StyleSheet.create({
     }
 })
 
-export default class LightConfigScreen extends Component {
+export default class LightSettingsScreen extends Component {
     render (){
         return (
-        
             <View style={styles.container}>
                 <View style={styles.rowContainer}>
-
-                    <Text style={styles.textContainer}>
-                        Room Name:
+                    <Image style={styles.cellContainer}
+                        source={require("../assets/images/light_bulb.png")} />
+                    <Text style={styles.textTitle}>
+                            Outside Lights
                     </Text>
-                    <TextInput
-                        placeholder="Current Name"
-                        placeholderTextColor= "grey"
-                        returnKeyType="go"
-                        style={formstyles.input}
-                    />
                 </View>
                 <View style={styles.rowContainer}>
+                    <Text style={styles.textContainer}>
+                            Turn On:
+                        </Text>
+                        <TextInput
+                            placeholder="13:00"
+                            placeholderTextColor= "grey"
+                            returnKeyType="go"
+                            style={formstyles.input}
+                        />
+                </View>
+                <View style={styles.rowContainer}>
+                    <Text style={styles.textContainer}>
+                            Turn Off:
+                        </Text>
+                        <TextInput
+                            placeholder="01:00"
+                            placeholderTextColor= "grey"
+                            returnKeyType="go"
+                            style={formstyles.input}
+                        />
+                </View>
 
-                    <Image  style={styles.cellContainer}
-                            source={require("../assets/images/light_bulb.png")} />
-                    <Button style={styles.buttonText}
-                            onPress={() => this.props.navigation.navigate('Rooms')}
-                            title="  New Image" />
-                </View>
+                
+
                 <View style={styles.rowContainer}>
-                    <Button style={styles.buttonText}
+                        <Button style={styles.buttonText}
                             onPress={() => this.props.navigation.goBack()}
-                            title=" Save " />
-                    <Button style={styles.buttonText}
-                            onPress={() => this.props.navigation.goBack()}
-                            title="  Cancel " />
-                    
+                            title="Light Switch" />
                 </View>
-                <View style={styles.rowContainer}>
-                    <Button style={styles.buttonText}
-                            onPress={() => this.props.navigation.goBack()}
-                            title=" Delete " />
-                    
-                </View>
-            </View>
+
+            </View>   
         );
 
     }
@@ -91,14 +98,17 @@ const styles = StyleSheet.create({
         //flex: 1,
         flexDirection: 'row',
         //height: 20,
-        resizeMode: 'contain',
+        //resizeMode: 'contain',
         paddingVertical: 5,
         //alignItems: 'center',
         justifyContent: 'center',
     },
+    imageStyle: {
+        resizeMode: 'contain',
+    },
     buttonContainer: {
-        width: 25,
-        height: 25,
+        width: 40,
+        height: 40,
         backgroundColor: '#fff',
         paddingVertical: 4
     },
@@ -112,14 +122,20 @@ const styles = StyleSheet.create({
         backgroundColor: 'grey'
     },
     cellContainer: {
-        width: 50,
-        height: 50,
-        resizeMode: 'contain',
+        width: 80,
+        height: 80,
+        //resizeMode: 'contain',
         backgroundColor: '#fff',
     },
+    textTitle: {
+        paddingVertical: 25,
+        paddingLeft: 10,
+        fontSize: 24,
+    },
     textContainer: {
-        paddingVertical: 8,
-        paddingLeft: 6,
-        fontSize: 18
-    }
+        fontSize: 14,
+        paddingVertical: 12,
+        paddingLeft: 6
+    },
+
 });

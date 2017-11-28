@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#3498db',
+        justifyContent: 'space-between',
     },
     logoContainer: {
         alignItems: 'center', 
@@ -111,5 +112,9 @@ const styles = StyleSheet.create({
         width: 160,
         textAlign: 'center',
         opacity: 0.8,
-    }
+    },
+    form: {
+        flex: 1,
+        justifyContent: 'space-between',
+      },
 });

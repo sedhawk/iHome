@@ -19,9 +19,9 @@ export default class LivingRoomDevicesScreen extends Component {
                     <Image style={styles.cellContainer}
                         source={require("../assets/images/light_bulb.png")} />
                     <Button
-                            onPress={() => this.props.navigation.navigate('Devices')}
+                            onPress={() => this.props.navigation.navigate('LightSettings')}
                             title="        Lights            " />
-                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('DeviceSettings')} >
+                    <TouchableHighlight style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate('LightConfig')} >
                         <Image style={styles.buttonContainer}
                             source={require("../assets/images/gear.png")} />
                     </TouchableHighlight>

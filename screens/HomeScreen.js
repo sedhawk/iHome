@@ -28,6 +28,8 @@ import GarageDeviceScreen from '../screens/GarageDevice';
 import KitchenSettingsScreen from '../screens/KitchenSettings';
 import KitchenDevicesScreen from '../screens/KitchenDevices';
 import VacuumConfigScreen from '../screens/VacuumConfig';
+import LightSettingsScreen from '../screens/LightSettings';
+import LightConfigScreen from '../screens/LightConfig';
 
 export class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -314,7 +316,19 @@ const RootNavigator = StackNavigator({
     navigationOptions: {
       headerTitle: 'Vacuum Configuration',
     },
-  },      
+  },
+  LightSettings: {
+    screen: LightSettingsScreen,
+    navigationOptions: {
+      headerTitle: 'Light Settings',
+    },
+  },
+  LightConfig: {
+    screen: LightConfigScreen,
+    navigationOptions: {
+      headerTitle: 'Light Configuration',
+    },
+  },       
 });
 
 export default RootNavigator;
